@@ -1,0 +1,17 @@
+#include<stdio.h>
+//Haz un programa que lea 5 numeros y calcula su media
+int main(){
+	int numero;
+	int cont;
+	int suma=0;
+	for(cont=1;cont<=5;cont++){
+		printf("\nDime un numero entero: ");
+		scanf("%d",&numero);
+		suma=suma+numero; //suma+=numero
+	}
+	printf("\nTu suma vale %d",suma);
+	suma=suma/5;
+	printf("\nTu media es %d",suma);
+	return 0;
+	
+}
