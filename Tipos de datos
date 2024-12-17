@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main(){
+	//Tipos de datos en C ANSI
+	int numero; //%d, %i
+	char letra; //%c
+	float decimal; //%f
+	double dobledecimal; //%f
+	//verdad o falso int con 1 y 0; 1=True
+	char palabra[10]; //spring de 10 palabras
+
+}
