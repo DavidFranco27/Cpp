@@ -1,0 +1,6 @@
+#include<stdio.h> //# significa una instrucción al preprocesador, que necesita encontrar
+
+int main(){
+	printf("Hola mundo");
+
+}
