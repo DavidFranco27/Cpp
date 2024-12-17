@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+int main(){
+	//Definicion de variables
+	int tabla;
+	//Me pide la tabla que quiere escribir el usuario
+	printf("Dime la tabla que deseas (1-10)");
+	scanf("%d",&tabla);
+	//Hago un bucle que muestra linea a linea la tabla
+	//for cont in range (1,11):
+	for(cont=1;cont<=10;cont++): //Nombre y donde empieza, hasta donde llega, y que aumente uno cada vez
+		printf("5");
+	return 0;	
+}
