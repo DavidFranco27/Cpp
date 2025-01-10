@@ -2,13 +2,13 @@
 
 int main(){
 	//Menú
-	int x,y;
+	float x,y;
 	int opcion;
-	int result;
+	float result;
 	printf("Introduce el primer numero: ");
-	scanf("%d",&x);
+	scanf("%f",&x);
 	printf("Introduce el segundo numero: ");
-	scanf("%d",&y);
+	scanf("%f",&y);
 	printf("\n*********************************");
 	printf("\n*            MENU               *");
 	printf("\n*********************************");
@@ -30,11 +30,16 @@ int main(){
 			result=x*y;
 			break;
 		case 4:
+			if(y==0){
+				printf("\nERROR, DIVISION ENTRE 0");
+			}
+			else{
 			result=x/y;
+			}
 			break;
 		case 5:
 			printf("\nADIOS");
 	}
-	printf("\nreulstado = %d",result);
+	printf("\nreulstado = %.2f",result);
 	return 0;
 }
