@@ -1,0 +1,9 @@
+#include<stdio.h>
+//Posicion de memoria &
+int main(){
+	int x; //Nombre y tipo de dato de la variable
+	x=3; //Su valor
+	printf("x=%d direccion x=%p",x,&x); //Direccion de la variable
+	return 0;
+
+}
