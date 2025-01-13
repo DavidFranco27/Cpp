@@ -1,0 +1,22 @@
+#include<stdio.h>
+//Intercambio a tres bandas
+
+int main(){
+	int a; //David
+	int b; //Antonio
+	int aux; //Jorge
+	a=2;
+	b=3;
+	printf("\nANTES DEL INTERCAMBIO");
+	printf("\na=%d",a);
+	printf("\nb=%d",b);
+	//Intercambio
+	aux=a;
+	a=b;
+	b=aux;
+	printf("\nDESPUES DEL INTERCAMBIO");
+	printf("\na=%d",a);
+	printf("\nb=%d",b);
+	return 0;
+
+}
