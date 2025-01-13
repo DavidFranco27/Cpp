@@ -2,8 +2,11 @@
 //Posicion de memoria &
 int main(){
 	int x; //Nombre y tipo de dato de la variable
+	int *px; //px es un puntero(pointer) a una variable de tipo entero
 	x=3; //Su valor
+	px=&x; //px contiene la direccion de memoria de x
 	printf("x=%d direccion x=%p",x,&x); //Direccion de la variable
+	printf("\nDesde px, x=%d",*px);
 	return 0;
 
 }
