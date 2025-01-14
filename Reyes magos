@@ -1,0 +1,18 @@
+#include<stdio.h>
+//Preguntamos los nombres de los tres reyes magos
+int main(){
+	char nombre1[9];
+	char nombre2[9];
+	char nombre3[9];
+	printf("\nDi el nombre del primer rey mago: ");
+	scanf("%s",nombre1);
+	printf("\nDi el nombre del segundo rey mago: ");
+	scanf("%s",nombre2);
+	printf("\nDi el nombre del tercer rey mago: ");
+	scanf("%s",nombre3);
+	//Los sacamos por pantalla
+	printf("\n1º %s",nombre1);
+	printf("\n2º %s",nombre2);
+	printf("\n3º %s",nombre3);
+	return 0;
+}
