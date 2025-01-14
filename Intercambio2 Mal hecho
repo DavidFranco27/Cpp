@@ -1,10 +1,13 @@
 #include<stdio.h>
 //Intercambio a tres bandas
-void intercambia(int a,int b){
-	int aux;
-	aux=a;
-	a=b;
-	b=aux;
+void intercambia(int *pa,int *pb){
+	int *paux;
+	paux=pa;
+	pa=pb;
+	pb=paux;
+	printf("\nEn la funcion las direcciones: ");
+	printf("\na=%d",*pa);
+	printf("\nb=%d",*pb);
 }
 
 int main(){
@@ -17,7 +20,8 @@ int main(){
 	printf("\na=%d",a);
 	printf("\nb=%d",b);
 	//Intercambio
-	intercambia(a,b);
+	printf("\nEnvio &a=%p, &b=%p",&a,&b);
+	intercambia(&a,&b);
 	printf("\nDESPUES DEL INTERCAMBIO");
 	printf("\na=%d",a);
 	printf("\nb=%d",b);
