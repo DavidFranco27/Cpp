@@ -1,6 +1,7 @@
 #include<stdio.h>
 //Preguntamos los nombres de los tres reyes magos
 int main(){
+	//String lista[3] como en python para hacerlo
 	char nombre1[9];
 	char nombre2[9];
 	char nombre3[9];
@@ -14,5 +15,6 @@ int main(){
 	printf("\n1º %s",nombre1);
 	printf("\n2º %s",nombre2);
 	printf("\n3º %s",nombre3);
+	
 	return 0;
 }
