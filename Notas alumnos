@@ -1,0 +1,32 @@
+#include<stdio.h>
+//Programa de inventario
+int main(){
+	struct Articulo{
+		int cod;
+		float nota;
+		char nombre[100];
+		char apellido1[100];
+		char apellido2[100];
+	};
+	struct Articulo m[5];
+	int cont;
+	printf("INTRODUCE LOS ARTICULOS: ");
+	for(cont=0;cont<5;cont++){
+		m[cont].cod=cont+1;
+		printf("\nALUMNO Nº:%d",cont+1);
+		printf("\nNOMBRE:");
+		scanf(" %s",&m[cont].nombre);
+		printf("\nPRIMER APELLIDO:");
+		scanf(" %s",&m[cont].apellido1);
+		printf("\nSEGUNDO APELLIDO:");
+		scanf(" %s",&m[cont].apellido2);
+		printf("\nNOTA:");
+		scanf(" %f",&m[cont].nota);
+	}
+	printf("\nCLASE:");
+	printf("\nALUMNO\tNOMBRE\t1A\t2A\tNOTA");
+	for(cont=0;cont<5;cont++){
+		printf("\n%d\t%s\t%s\t%s\t%.2f",m[cont].cod,m[cont].nombre,m[cont].apellido1,m[cont].apellido2,m[cont].nota);
+	}
+	return 0;
+}
