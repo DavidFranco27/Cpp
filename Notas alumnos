@@ -1,32 +1,32 @@
 #include<stdio.h>
-//Programa de inventario
+#define DISTANCIA 5
+//Programna de notas de 5 alumnos
 int main(){
-	struct Articulo{
-		int cod;
+	//Defino la estructura
+	struct Alumnos{
+		char nombre[20];
+		char apellido1[20];
+		char apellido2[20];
 		float nota;
-		char nombre[100];
-		char apellido1[100];
-		char apellido2[100];
 	};
-	struct Articulo m[5];
+	struct Alumnos m[DISTANCIA];
 	int cont;
-	printf("INTRODUCE LOS ARTICULOS: ");
-	for(cont=0;cont<5;cont++){
-		m[cont].cod=cont+1;
+	printf("INTRODUCE LOS ALUMNOS: ");
+	for(cont=0;cont<DISTANCIA;cont++){
 		printf("\nALUMNO Nº:%d",cont+1);
 		printf("\nNOMBRE:");
-		scanf(" %s",&m[cont].nombre);
+		scanf(" %s",m[cont].nombre);
 		printf("\nPRIMER APELLIDO:");
-		scanf(" %s",&m[cont].apellido1);
+		scanf(" %s",m[cont].apellido1);
 		printf("\nSEGUNDO APELLIDO:");
-		scanf(" %s",&m[cont].apellido2);
-		printf("\nNOTA:");
-		scanf(" %f",&m[cont].nota);
+		scanf(" %s",m[cont].apellido2);
+		printf("\nNOTA ALUMNO:");
+		scanf(" %f",&m[cont].nota); //Al ser un número o letra único necesitamos de &
 	}
-	printf("\nCLASE:");
-	printf("\nALUMNO\tNOMBRE\t1A\t2A\tNOTA");
-	for(cont=0;cont<5;cont++){
-		printf("\n%d\t%s\t%s\t%s\t%.2f",m[cont].cod,m[cont].nombre,m[cont].apellido1,m[cont].apellido2,m[cont].nota);
+	printf("\nLISTA DE ALUMNOS Y SUS NOTAS:");
+	printf("\nNOMBRE\t1A\t2A\tNOTA"); //\t=tabulador
+	for(cont=0;cont<DISTANCIA;cont++){
+		printf("\n%s\t%s\t%s\t%.2f",m[cont].nombre,m[cont].apellido1,m[cont].apellido2,m[cont].nota);
 	}
 	return 0;
 }
