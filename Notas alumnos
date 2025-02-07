@@ -28,5 +28,12 @@ int main(){
 	for(cont=0;cont<DISTANCIA;cont++){
 		printf("\n%s\t%s\t%s\t%.2f",m[cont].nombre,m[cont].apellido1,m[cont].apellido2,m[cont].nota);
 	}
-	return 0;
+	float suma=0;
+    float media;
+    for(cont=0;cont<DISTANCIA;cont++){
+        suma=suma+m[cont].nota;
+    }
+    media=suma/DISTANCIA;
+    printf("\nLa media vale %.2f",media);
+    return 0;
 }
