@@ -1,0 +1,32 @@
+#include<stdio.h>
+#define NPRODUC 3
+//FICHEROS BINARIOS
+int main(){
+	int cont;
+	struct Producto{
+		int cod;
+		char nombre[15];
+		float precio;
+	};
+	struct Producto misProductos[NPRODUC];
+	for(cont=0;cont<NPRODUC;cont++){
+		printf("\nCodigo %d: ",cont+1);
+		scanf("%d",&misProductos[cont].cod);
+		printf("\nNombre %d: ",cont+1);
+		scanf("%s",misProductos[cont].nombre);
+		printf("\nPrecio %d: ",cont+1);
+		scanf("%f",&misProductos[cont].precio);
+	}
+	printf("\nARTICULOS:");
+	printf("\nCODIGO\tNOMBRE\tPRECIO");
+	for(cont=0;cont<NPRODUC;cont++){
+		printf("\n%d\t%s\t%.2f",misProductos[cont].cod, misProductos[cont].nombre, misProductos[cont].precio);
+	}
+	FILE *fichero;
+	fichero=fopen("Misproductos.bin","wb");
+	fwrite(misProductos,sizeof(struct Producto)*NPRODUC,1,fichero);
+	//fwrite(Donde empiezo, tamanio tiene, 1, destino final)
+	fclose(fichero);
+	
+	return (0);
+}
