@@ -18,8 +18,5 @@ int main(){
 	for(cont=0;cont<NPRODUC;cont++){
 		printf("\n%d\t%s\t%.2f",misProductosLeidos[cont].cod, misProductosLeidos[cont].nombre, misProductosLeidos[cont].precio);
 	}
-	
-	
-	
 	return (0);
 }
