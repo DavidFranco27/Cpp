@@ -1,0 +1,39 @@
+#include<stdio.h>
+#define CANTIDAD 3
+
+int main(){
+	struct partido{
+		char equipo1[15];
+		char equipo2[15];
+		int puntacion1;
+		int puntacion2;
+		int dia;
+		int mes;
+		int anio;
+	};
+	struct partido p[CANTIDAD];
+	int cont;
+	for(cont=0;cont<CANTIDAD;cont++){
+		printf("\nPARTIDO Nº:%d",cont+1);
+		printf("\nPrimer equipo:");
+		scanf(" %s", p[cont].equipo1);
+		printf("\nSegundo equipo:");
+		scanf(" %s", p[cont].equipo2);
+		printf("\nPuntacion del primer equipo:");
+		scanf(" %d",&p[cont].puntacion1);
+		printf("\nPuntacion del segundo equipo:");
+		scanf(" %d",&p[cont].puntacion2);
+		printf("\nSucedio en el dia:");
+		scanf(" %d",&p[cont].dia);
+		printf("\nSucedio en el mes:");
+		scanf(" %d",&p[cont].mes);
+		printf("\nY en el anio:");
+		scanf(" %d",&p[cont].anio);
+	};
+	printf("\nPARTIDOS:");
+	printf("\nEQUIPO1\t\tEQUIPO2\t\tPUNTACION\t\tFECHA");
+	for(cont=0;cont<CANTIDAD;cont++){
+		printf("\n%s\t\t%s\t\t%d-%d\t\t%d-%d-%d",p[cont].equipo1,p[cont].equipo2,p[cont].puntacion1,p[cont].puntacion2,p[cont].dia,p[cont].mes,p[cont].anio);
+	};
+	return 0;
+}
