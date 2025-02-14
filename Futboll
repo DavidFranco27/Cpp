@@ -36,4 +36,5 @@ int main(){
 		printf("\n%s\t\t%s\t\t%d-%d\t\t%d-%d-%d",p[cont].equipo1,p[cont].equipo2,p[cont].puntacion1,p[cont].puntacion2,p[cont].dia,p[cont].mes,p[cont].anio);
 	};
 	return 0;
+	//memory alocation
 }
