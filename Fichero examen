@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define NPERSONAS 3
+
+int main(void) {
+	int cont;
+	char *lista[NPERSONAS];
+	char *pintercambio;
+	struct lista{
+		int dia;
+		int mes;
+		int anio;
+		char nombre[15]
+	};
+	for(cont=0, cont<NPERSONAS,cont++){
+		printf();
+		scanf();
+		printf();
+		scanf();
+		printf();
+		scanf();
+		printf();
+		scanf();
+	}
+  return 0;
+}
