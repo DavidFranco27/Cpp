@@ -13,15 +13,17 @@ int main(void) {
 		int anio;
 		char nombre[15]
 	};
+	struct lista p[NPERSONAS];
 	for(cont=0, cont<NPERSONAS,cont++){
-		printf();
-		scanf();
-		printf();
-		scanf();
-		printf();
-		scanf();
-		printf();
-		scanf();
+		printf("\nDime el dia: ");
+		scanf("%d",p(cont).dia);
+		printf("\nDime el mes: ");
+		scanf("%d",p(cont).mes);
+		printf("\nDime el anio: ");
+		scanf("%d",p(cont).anio);
+		printf("\nDime el nombre: ");
+		scanf("%s",p(cont).nombre);
 	}
-  return 0;
+	printf();
+	return 0;
 }
