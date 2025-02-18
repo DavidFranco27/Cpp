@@ -1,6 +1,20 @@
 #include<stdio.h>
 #define CANTIDAD 3
 
+quiniela(int puntacion1, int puntacion2){
+	char resultado;
+	if(puntacion1>puntacion2){
+		resultado='1';
+	}
+	if(puntacion1<puntacion2){
+		resultado='2';
+	}
+	if(puntacion1==puntacion2){
+		resultado='X';
+	}
+	return(resultado);
+}
+
 int main(){
 	struct partido{
 		char equipo1[15];
@@ -31,10 +45,9 @@ int main(){
 		scanf(" %d",&p[cont].anio);
 	};
 	printf("\nPARTIDOS:");
-	printf("\nEQUIPO1\t\tEQUIPO2\t\tPUNTACION\t\tFECHA");
+	printf("\nEQUIPO1\t\tEQUIPO2\t\tPUNTACION\t\tQuiniela\t\tFECHA");
 	for(cont=0;cont<CANTIDAD;cont++){
-		printf("\n%s\t\t%s\t\t%d-%d\t\t%d-%d-%d",p[cont].equipo1,p[cont].equipo2,p[cont].puntacion1,p[cont].puntacion2,p[cont].dia,p[cont].mes,p[cont].anio);
+		printf("\n%s\t\t%s\t\t%d-%d\t\t%c\t\%d-%d-%d",p[cont].equipo1,p[cont].equipo2,p[cont].puntacion1,p[cont].puntacion2,quiniela(p[cont].puntacion1,p[cont].puntacion2),p[cont].dia,p[cont].mes,p[cont].anio);
 	};
 	return 0;
-	//memory alocation
 }
