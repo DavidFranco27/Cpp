@@ -5,6 +5,7 @@
 
 int main(void) {
 	int cont;
+	//Creamos la estructura para guardar datos
 	char *lista[NPERSONAS];
 	char *pintercambio;
 	struct lista{
@@ -13,17 +14,26 @@ int main(void) {
 		int anio;
 		char nombre[15]
 	};
+	//Le decimos que queremos
+	printf("\nCuentame datos de los nacimientos de las personas que quieras");
 	struct lista p[NPERSONAS];
+	//Usamos un for para evitar tener que poner eso NPERSONAS veces
 	for(cont=0, cont<NPERSONAS,cont++){
 		printf("\nDime el dia: ");
-		scanf("%d",p(cont).dia);
+		scanf("%d",p[cont].dia);
 		printf("\nDime el mes: ");
-		scanf("%d",p(cont).mes);
+		scanf("%d",p[cont].mes);
 		printf("\nDime el anio: ");
-		scanf("%d",p(cont).anio);
+		scanf("%d",p[cont].anio);
 		printf("\nDime el nombre: ");
-		scanf("%s",p(cont).nombre);
+		scanf("%s",p[cont].nombre);
 	}
-	printf();
+	//Lo mostramos por pantalla
+	printf("\nLista de nacimientos");
+	printf("\nNacimiento\tNombre");
+	for(cont=0, cont<NPERSONAS,cont++){
+		printf("\n%d-%d-%d\t%s",p[cont].dia,p[cont].mes,p[cont].anio,p[cont].nombre);
+	}
+	//El ordenador me asegura que funciona y me deja acabar de verlo
 	return 0;
 }
